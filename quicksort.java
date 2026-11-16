@@ -4,8 +4,8 @@ public class quicksort {
 
     static void quick(int[] b, int s, int e) {
         if (s >= e) return;
-            int pivot = b[s];
-        int i = s, j = e;
+        int pivot = b[s];
+        int i = s+1; int j = e;
         while (i <= j) {
             while (b[i] < pivot) i++;
             while (b[j] > pivot) j--;
@@ -14,6 +14,7 @@ public class quicksort {
                 i++;
                 j--;
             }
+         
         }
         quick(b, s, j);
         quick(b, i, e);
